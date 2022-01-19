@@ -44,7 +44,7 @@ const AppProvider = ({ children }) => {
     setTotal,
     user,
     setUser,
-  }), []);
+  }), [cart, total, user]);
 
   return (
     <AppContext.Provider value={AppStates}>
