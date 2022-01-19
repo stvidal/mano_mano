@@ -1,16 +1,23 @@
 import {
-  BrowserRouter,
+  BrowserRouter as Router,
   Routes,
   Route
 } from "react-router-dom";
+
+import AppProvider from "./contexts/AppProvider";
+import Home from './pages/Home/Home';
 
 import './App.css';
 
 const App = () => {
   return (
-    <section className="App">
-      <h1>Mano Mano</h1>
-    </section>
+    <AppProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Router>
+    </AppProvider>
   );
 }
 
